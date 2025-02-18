@@ -3,7 +3,8 @@ import { GoCheckCircleFill } from "react-icons/go";
 export default function EmailVerified() {
   return (
     <div className="flex justify-between items-center h-screen">
-      <div className="w-1/2 h-full flex justify-center flex-col items-center bg-black text-white">
+      {/* Left Side Image Portion */}
+      <div className="w-1/2 h-full hidden md:flex justify-center flex-col items-center bg-black text-white">
         <Image
           src="/vector.png"
           alt="Email Image"
@@ -17,7 +18,9 @@ export default function EmailVerified() {
           licenses.
         </p>
       </div>
-      <div className="w-1/2 h-full flex justify-center flex-col items-center p-4 bg-[#EBDFD7]">
+
+      {/* Right Side Verification Section */}
+      <div className="w-full md:w-1/2 h-full flex justify-center flex-col items-center p-4 bg-[#EBDFD7]">
         <div className="w-full lg:w-[60%] space-y-4">
           <GoCheckCircleFill className="text-6xl text-[#22c55e]" />
           <h1 className="font-bold text-2xl text-start mt-4 text-black">

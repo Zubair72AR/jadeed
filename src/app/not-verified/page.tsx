@@ -6,7 +6,8 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function NotVerified() {
   return (
     <div className="flex justify-between items-center h-screen">
-      <div className="w-1/2 h-full flex justify-center flex-col items-center bg-black text-white">
+      {/* Left Side Image Portion */}
+      <div className="w-1/2 h-full hidden md:flex justify-center flex-col items-center bg-black text-white">
         <Image
           src="/vector.png"
           alt="Email Image"
@@ -20,7 +21,9 @@ export default function NotVerified() {
           licenses.
         </p>
       </div>
-      <div className="w-1/2 h-full flex justify-center flex-col items-center p-4 bg-[#EBDFD7]">
+
+      {/* Right Side Content Portion */}
+      <div className="w-full md:w-1/2 h-full flex justify-center flex-col items-center p-4 bg-[#EBDFD7]">
         <div className="w-full lg:w-[60%] space-y-4">
           <MdOutlineMailLock className="text-6xl text-red-600" />
           <h1 className="font-bold text-2xl text-start mt-4 text-black">
@@ -36,10 +39,11 @@ export default function NotVerified() {
               user123@example.com
             </p>
           </div>
-
-          <button className="w-full bg-[#e65f2b] text-white py-2 rounded-lg">
-            Send Verification Email
-          </button>
+          <Link href="/email-verified">
+            <button className="w-full bg-[#e65f2b] text-white py-2 rounded-lg">
+              Send Verification Email
+            </button>
+          </Link>
           <div className="flex justify-between items-center text-black text-[13px]">
             <Link href="/" className="flex justify-start items-center gap-1">
               Skip for now <IoIosArrowForward />

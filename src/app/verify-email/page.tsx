@@ -5,7 +5,8 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function VerifyEmail() {
   return (
     <div className="flex justify-between items-center h-screen">
-      <div className="w-1/2 h-full flex justify-center flex-col items-center bg-black text-white">
+      {/* Left Side Image Portion */}
+      <div className=" w-1/2 h-full hidden md:flex justify-center flex-col items-center bg-black text-white">
         <Image
           src="/vector.png"
           alt="Email Image"
@@ -19,7 +20,9 @@ export default function VerifyEmail() {
           licenses.
         </p>
       </div>
-      <div className="w-1/2 h-full flex justify-center flex-col items-center p-4 bg-[#EBDFD7]">
+
+      {/* Right Side Content Portion */}
+      <div className="w-full md:w-1/2 h-full flex justify-center flex-col items-center p-4 bg-[#EBDFD7]">
         <div className="w-full lg:w-[60%] space-y-4">
           <Link href="/">
             <h1 className="text-2xl font-bold text-black">Jadeed</h1>
@@ -43,9 +46,11 @@ export default function VerifyEmail() {
           <p className="text-black text-[13px]">
             still can't find the email? No problem.
           </p>
-          <button className="w-full bg-[#e65f2b] text-white py-2 rounded-lg">
-            Resend Verification Email
-          </button>
+          <Link href="/email-verified">
+            <button className="w-full bg-[#e65f2b] text-white py-2 rounded-lg">
+              Resend Verification Email
+            </button>
+          </Link>
           <div className="flex justify-between items-center text-black text-[13px]">
             <Link href="/" className="flex justify-start items-center gap-1">
               Skip for now <IoIosArrowForward />

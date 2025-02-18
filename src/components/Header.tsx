@@ -22,7 +22,7 @@ const navLink = [
 export default function Header() {
   return (
     <div className="absolute top-2 left-1/2 -translate-x-1/2">
-      <nav className="flex justify-between items-center gap-2">
+      <nav className="w-full flex justify-between items-center gap-2">
         {navLink.map((nav, i) => (
           <Link
             key={i}
